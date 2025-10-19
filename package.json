@@ -23,6 +23,7 @@
         "@daikin-oss/design-system-web-components": "^1.3.0",
         "@lit/react": "^1.0.8",
         "@supabase/supabase-js": "^2.49.2",
+        "next": "^14.2.33",
         "next-auth": "^5.0.0-beta.29",
         "react": "^18.3.1",
         "react-dom": "^18.3.1"
