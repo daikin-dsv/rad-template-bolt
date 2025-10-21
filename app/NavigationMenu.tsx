@@ -23,6 +23,7 @@ type NavigationMenuProps = {
 
 interface UserProfileElement extends HTMLElement {
     user?: SessionUser;
+    text?: UserText;
 }
 
 export default function NavigationMenu({
@@ -34,10 +35,15 @@ export default function NavigationMenu({
     const userProfileRef = useRef<UserProfileElement | null>(null);
 
     useEffect(() => {
-        if (userProfileRef.current && user) {
-            userProfileRef.current.user = user;
+        if (userProfileRef.current) {
+            if (user) {
+                userProfileRef.current.user = user;
+            }
+            if (userText) {
+                userProfileRef.current.text = userText;
+            }
         }
-    }, [user]);
+    }, [user, userText]);
 
     return (
         <>
@@ -45,7 +51,6 @@ export default function NavigationMenu({
                 ref={userProfileRef}
                 logoutLink="/api/auth/signout"
                 accountManagementLink={userManagementLink}
-                text={userText}
             ></user-profile>
             {links.map(({ href, label }) => (
                 <ActiveLink key={href} slot="route" href={href}>
