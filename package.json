@@ -1,5 +1,5 @@
 {
-    "name": "rad-template",
+    "name": "rad-template-bolt",
     "version": "0.1.0",
     "private": true,
     "type": "module",
@@ -24,11 +24,11 @@
         "@lit/react": "^1.0.8",
         "next": "^14.2.33",
         "next-auth": "^5.0.0-beta.29",
-        "react": "19.1.0",
-        "react-dom": "19.1.0"
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
-        "@daikin-oss/tailwind": "^0.3.0",
+        "@daikin-oss/tailwind": "^0.4.0",
         "@eslint/eslintrc": "^3",
         "@playwright/test": "^1.56.0",
         "@tailwindcss/postcss": "^4",
